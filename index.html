@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OSINT Law</title>
+<meta name="description" content="Открытый курс разведки по открытым источникам: методы, проверка и правовые границы">
+<link rel="canonical" href="https://osintlaw.pro/">
+<meta property="og:url" content="https://osintlaw.pro/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OSINT Law">
+<meta property="og:description" content="Открытый курс разведки по открытым источникам: методы, проверка и правовые границы">
+<meta property="og:site_name" content="OSINT Law">
+<meta property="og:locale" content="ru_RU">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: титул курса, три принципа, список уроков. Одна колонка, на широком экране принципы в ряд. */
+:root{
+  --bg:#f3f5f6; --paper:#ffffff; --fg:#18212b; --muted:#5b6773; --line:#d8dee3;
+  --accent:#1f5f8b; --accent-soft:#e3eef6; --law:#7b2d52; --law-soft:#f6e6ee;
+  --f-display:"Spectral",Georgia,"Times New Roman",serif;
+  --f-body:"IBM Plex Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171c; --paper:#1a2128; --fg:#e3e8ec; --muted:#9aa6b1; --line:#2c3640;
+  --accent:#7db7e0; --accent-soft:#1d3142; --law:#e79ac0; --law-soft:#3a1c2b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171c; --paper:#1a2128; --fg:#e3e8ec; --muted:#9aa6b1; --line:#2c3640;
+  --accent:#7db7e0; --accent-soft:#1d3142; --law:#e79ac0; --law-soft:#3a1c2b; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--f-body);padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:60rem;margin:0 auto}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+header{padding-block:64px 36px;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 12px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(44px,9vw,80px)/1 var(--f-display);margin:12px 0 16px;letter-spacing:-.02em}
+h1 .law{color:var(--law)}
+.lede{font-size:20px;max-width:36rem;color:var(--muted);margin:0}
+h2{font:700 26px/1.2 var(--f-display);margin:0 0 16px}
+section{padding-top:40px}
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}
+@media (max-width:760px){.principles{grid-template-columns:minmax(0,1fr)}}
+.principles li{border-top:2px solid var(--fg);padding-top:12px}
+.principles li:first-child{border-color:var(--law)}
+.principles b{display:block;font:700 19px/1.3 var(--f-display);margin-bottom:4px}
+.principles span{font-size:15.5px;color:var(--muted)}
+.lessons{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.lesson{display:grid;gap:4px;text-decoration:none;color:var(--fg);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+.lesson:hover{border-color:var(--accent)}
+.lesson .mod{font:500 12px/1.4 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lesson .lt{font:700 22px/1.25 var(--f-display)}
+.lesson .ls{color:var(--muted)}
+.lesson .meta{font:400 13px/1.5 var(--f-mono);color:var(--muted);margin-top:4px}
+.how{display:grid;gap:8px;padding-left:1.2em;margin:0}
+.note{background:var(--law-soft);border-left:3px solid var(--law);border-radius:6px;padding:14px 16px;font-size:15.5px;margin-top:20px}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Открытый курс · бесплатно</div>
+  <h1>OSINT <span class="law">Law</span></h1>
+  <p class="lede">Открытый курс разведки по открытым источникам: методы, проверка и правовые границы</p>
+</header>
+
+<section aria-labelledby="p-h">
+  <h2 id="p-h">Три правила курса</h2>
+  <ul class="principles">
+    <li><b>Законно</b><span>Только данные, к которым есть законный доступ, и только с допустимой целью. В каждом уроке есть блок о правовых границах.</span></li>
+    <li><b>Проверяемо</b><span>Каждый вывод можно повторить: источник, дата, копия. Без «мне сказали» и непроверяемых инсайдов.</span></li>
+    <li><b>С выводом</b><span>Разведка отвечает на вопрос и помогает принять решение. Набор ссылок разведкой не считается.</span></li>
+  </ul>
+</section>
+
+<section aria-labelledby="l-h">
+  <h2 id="l-h">Уроки</h2>
+  <ul class="lessons">
+<li><a class="lesson" href="lessons/m1-l1-vvedenie-v-osint.html"><span class="mod">Модуль 1 · Урок 1</span><span class="lt">Введение в OSINT</span><span class="ls">Что такое разведка по открытым источникам, где проходят её правовые границы и какие ошибки делает аналитик.</span><span class="meta">22 экранов · 34 проверок · тест из 20 вопросов · ~100 мин</span></a></li>
+  </ul>
+</section>
+
+<section aria-labelledby="h-h">
+  <h2 id="h-h">Как устроен урок</h2>
+  <ol class="how">
+    <li>Короткие экраны, одна мысль на экран.</li>
+    <li>После экранов проверки понимания с разбором каждого ответа.</li>
+    <li>Блоки «Миф и факт» разбирают распространённые заблуждения с источниками.</li>
+    <li>Итоговый тест в режиме экзамена: разбор открывается после завершения, открытые ответы вы сверяете с эталоном.</li>
+    <li>Прогресс хранится только в вашем браузере. Регистрация не нужна, данные никуда не отправляются.</li>
+  </ol>
+  <p class="note">Курс учебный и не заменяет юридическую консультацию. Законы меняются: в уроках указано, на какую дату проверены факты. Упражнения строятся на вымышленных объектах. Курс не учит собирать сведения о частных лицах.</p>
+</section>
+
+<footer><span>OSINT Law</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru" rel="license noopener" target="_blank">CC BY-NC-SA 4.0</a></span><span>Учебный материал, не юридическая консультация.</span><span><a href="/privacy-policy.html">Политика обработки персональных данных</a></span><span><a href="/terms.html">Пользовательское соглашение</a></span><span><a href="/cookie-policy.html">Политика cookie</a></span></footer>
+</div>
+</body>
+</html>
